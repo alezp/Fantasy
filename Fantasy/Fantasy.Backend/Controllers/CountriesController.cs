@@ -30,7 +30,6 @@ public class CountriesController : ControllerBase
         {
             return NotFound();
         }
-
         return Ok(country);
     }
 
@@ -50,7 +49,6 @@ public class CountriesController : ControllerBase
         {
             return NotFound();
         }
-
         _context.Remove(country);
         await _context.SaveChangesAsync();
         return NoContent();
