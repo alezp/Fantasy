@@ -1,4 +1,5 @@
 using Fantasy.Frontend;
+using Fantasy.Frontend.Repositories;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
