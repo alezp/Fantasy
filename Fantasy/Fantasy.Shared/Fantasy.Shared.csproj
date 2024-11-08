@@ -18,13 +18,13 @@
     <Compile Update="Resources\Literals.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>Literals.es</DependentUpon>
+      <DependentUpon>Literals.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="Resources\Literals.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Literals.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
