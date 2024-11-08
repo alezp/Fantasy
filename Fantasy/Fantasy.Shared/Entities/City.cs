@@ -8,7 +8,7 @@ namespace Fantasy.Shared.Entities
 {
     public class City
     {
-        public State? State { get; set; }
+        //public State? State { get; set; }
         public ICollection<User>? Users { get; set; }
 
     }

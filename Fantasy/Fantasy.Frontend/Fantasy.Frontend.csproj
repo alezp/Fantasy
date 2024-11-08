@@ -24,4 +24,8 @@
     <Folder Include="Pages\Users\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Fantasy.Shared\Fantasy.Shared.csproj" />
+  </ItemGroup>
+
 </Project>      

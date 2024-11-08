@@ -1,12 +1,33 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿<h3>GenericList</h3>
 
-namespace Fantasy.Frontend.Shared;
 
-public partial class GenericList<Titem>
+@typeparam Titem
+
+@if (MyList is null)
 {
-    [Parameter] public RenderFragment? Loading { get; set; }
-    [Parameter] public RenderFragment? NoRecords { get; set; }
-    [EditorRequired, Parameter] public RenderFragment Body { get; set; } = null!;
-    [EditorRequired, Parameter] public List<Titem> MyList { get; set; } = null!;
+    @if (Loading is null)
+    {
+        <div class="d-flex justify-content-center align-items-center">
+            <img src="https://www.wpfaster.org/wp-content/uploads/2013/06/loading-gif.gif" width="200" height="200" />
+        </div>
+    }
+    else
+    {
+        @Loading
+    }
 }
-
+else if (MyList.Count == 0)
+{
+    @if (NoRecords is null)
+    {
+        <p>No hay registros para mostrar...</p>
+    }
+    else
+    {
+        @NoRecords
+    }
+}
+else
+{
+    @Body
+}
