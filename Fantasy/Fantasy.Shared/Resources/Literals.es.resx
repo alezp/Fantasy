@@ -141,4 +141,10 @@
   <data name="NoRecords" xml:space="preserve">
     <value>No hay registros para mostrar...</value>
   </data>
+  <data name="New" xml:space="preserve">
+    <value>Nuevo</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Pais</value>
+  </data>
 </root>
