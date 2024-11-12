@@ -23,8 +23,8 @@ public partial class CountryForm
 
     public bool FormPostedSuccessfully { get; set; } = false;
 
-    [Inject] private SweetAlertService SweetAlertService { get; set; } = null!;
     [Inject] private IStringLocalizer<Literals> Localizer { get; set; } = null!;
+    [Inject] private SweetAlertService SweetAlertService { get; set; } = null!;
 
     private async Task OnBeforeInternalNavigation(LocationChangingContext context)
     {
