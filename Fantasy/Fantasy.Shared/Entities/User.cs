@@ -1,48 +1,33 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+using Fantasy.Shared.Resources;
+using Microsoft.AspNetCore.Identity;
 
 namespace Fantasy.Shared.Entities;
 
 public class User : IdentityUser
 {
-    [Display(Name = "Documento")]
-    [MaxLength(20, ErrorMessage = "El campo {0} debe tener máximo {1} caractéres.")]
-    [Required(ErrorMessage = "El campo {0} es obligatorio.")]
-    public string Document { get; set; } = null!;
-
-    [Display(Name = "Nombres")]
-    [MaxLength(50, ErrorMessage = "El campo {0} debe tener máximo {1} caractéres.")]
-    [Required(ErrorMessage = "El campo {0} es obligatorio.")]
+    [Display(Name = "FirstName", ResourceType = typeof(Literals))]
+    [MaxLength(50, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(Literals))]
+    [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Literals))]
     public string FirstName { get; set; } = null!;
 
-    [Display(Name = "Apellido")]
-    [MaxLength(50, ErrorMessage = "El campo {0} debe tener máximo {1} caractéres.")]
-    [Required(ErrorMessage = "El campo {0} es obligatorio.")]
+    [Display(Name = "LastName", ResourceType = typeof(Literals))]
+    [MaxLength(50, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(Literals))]
+    [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Literals))]
     public string LastName { get; set; } = null!;
 
-    [Display(Name = "Dirección")]
-    [MaxLength(200, ErrorMessage = "El campo {0} debe tener máximo {1} caractéres.")]
-    [Required(ErrorMessage = "El campo {0} es obligatorio.")]
-    public string Address { get; set; } = null!;
-
-    [Display(Name = "Foto")]
+    [Display(Name = "Image", ResourceType = typeof(Literals))]
     public string? Photo { get; set; }
 
-    [Display(Name = "Tipo de usuario")]
+    [Display(Name = "UserType", ResourceType = typeof(Literals))]
     public UserType UserType { get; set; }
 
-    public City? City { get; set; }
+    public Country Country { get; set; } = null!;
 
-    [Display(Name = "Ciudad")]
-    [Range(1, int.MaxValue, ErrorMessage = "Debes seleccionar una {0}.")]
-    public int CityId { get; set; }
+    [Display(Name = "Country", ResourceType = typeof(Literals))]
+    [Range(1, int.MaxValue, ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Literals))]
+    public int CountryId { get; set; }
 
-    [Display(Name = "Usuario")]
+    [Display(Name = "User", ResourceType = typeof(Literals))]
     public string FullName => $"{FirstName} {LastName}";
 }
-

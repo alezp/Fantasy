@@ -121,7 +121,7 @@
     <value>LABA</value>
   </data>
   <data name="Subtitle" xml:space="preserve">
-    <value>Aplicación de viajes en  Taxis en San Miguel de Tucumàn</value>
+    <value>Aplicación de viajes en  Taxis en San Miguel de Tucumán</value>
   </data>
   <data name="About" xml:space="preserve">
     <value>Acerca de </value>
@@ -176,5 +176,47 @@
   </data>
   <data name="RecordDeletedOk" xml:space="preserve">
     <value>Registro borrado con éxito.</value>
+  </data>
+  <data name="RecordsNumber" xml:space="preserve">
+    <value>Nro de Registros</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Todos</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Buscar...</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Acciones</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Filtrar</value>
+  </data>
+  <data name="Clean" xml:space="preserve">
+    <value>Limpiar</value>
+  </data>
+  <data name="PleaseWait" xml:space="preserve">
+    <value>Por Favor, espere.</value>
+  </data>
+  <data name="ERR001" xml:space="preserve">
+    <value>Registro no encontrado.</value>
+  </data>
+  <data name="ERR002" xml:space="preserve">
+    <value>No se puede eliminar, porque tiene registros relacionados.</value>
+  </data>
+  <data name="ERR003" xml:space="preserve">
+    <value>El registro que estás intentando crear ya existe.</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Nombres</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Apellidos</value>
+  </data>
+  <data name="UserType" xml:space="preserve">
+    <value>Tipo de Usuario</value>
   </data>
 </root>

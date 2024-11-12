@@ -9,5 +9,10 @@
 }
 else
 {
-    <CountryForm @ref="countryForm" Country="country" OnValidSubmit="EditAsync" ReturnAction="Return" />
+    <MudDialog>
+        <DialogContent>
+            <CountryForm @ref="countryForm" Country="country" OnValidSubmit="EditAsync" ReturnAction="Return" />
+        </DialogContent>
+    </MudDialog>
 }
+

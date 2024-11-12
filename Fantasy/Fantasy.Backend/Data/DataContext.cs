@@ -11,7 +11,7 @@ public class DataContext : IdentityDbContext<User>
     }
 
     public DbSet<Country> Countries { get; set; }
-
+    
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);

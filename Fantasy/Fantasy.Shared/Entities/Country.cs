@@ -14,5 +14,9 @@ namespace Fantasy.Shared.Entities
         [MaxLength(100)]
         [Required]
         public string Name { get; set; } = null!;
+        public ICollection<User>? Users { get; set; }
+
+        public int UsersCount => Users == null ? 0 : Users.Count;
+
     }
 }
